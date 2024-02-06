@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Blog 1</title>
+    </head>
+    <body>
+        <h2>Blog 1</h2>
+        <p>
+            Ipsum dolor sit amet, consectetur adipiscing elit.
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+            Mauris massa. Vestibulum lacinia arcu eget nulla.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            Curabitur sodales ligula in libero.
+        </p>
+        <div class ="action">
+            <button id ="likeButtonCars" onclick="likeBlog('Cars')" class="like">Like</button>
+            <span id ="likeCounterCars" class="likes">
+                <script>
+                     let initialLikeCountCars = localStorage.getItem('likeCountCars');
+    if (initialLikeCountCars === null) {
+        initialLikeCountCars = '0';
+        localStorage.setItem('likeCountCars', '0');
+    }
+    document.getElementById('likeCounterCars').textContent = initialLikeCountCars;
+                </script>
+            </span>
+        </div>
+        <div class ="comments">
+            Comments List:
+            <ul>
+                <li>Great Blog</li>
+                <li>Informative</li>
+            </ul>
+            <form>
+                <input type="text" placeholder="Add a comment">
+                <button>Post</button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
